@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Пример 45</title>
+</head>
+<body>
+  <script>
+
+    function checkAge(age) {
+      if (age > 18) return true;
+      else return confirm('Родители разрешили?');
+    }
+    
+    function ask(strAge) {
+      var age = parseFloat(strAge);
+      switch (true) {
+        case (age != strAge): alert('Вероятно, вы ввели не число'); break;
+        case (age <= 0): alert('Вероятно, вы еще не родились'); break;
+        case (age > 120): alert('Сложно поверить, что вам столько лет'); break;
+        default:  if (checkAge(age)) alert('Доступ разрешен');
+                  else alert('В доступе отказано');  
+      }
+    }
+    ask(prompt('Ваш возраст?').replace(',','.'));
+
+  </script>
+</body>
+</html>

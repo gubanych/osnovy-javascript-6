@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Пример 43</title>
+</head>
+<body>
+  <script>
+    function showMessage(from, text) {
+      if (text == undefined) {
+        text = 'текст не передан';
+      }
+      alert(from + ': ' + text);
+    }
+
+    showMessage('Виталий Валентинович', 'Привет!');
+    showMessage('Виталий Валентинович');
+  </script>
+</body>
+</html>

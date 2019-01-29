@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Пример 44</title>
+</head>
+<body>
+  <script>
+    function calcD(a, b, c) {
+      return b * b - 4 * a * c;
+    }
+
+    var strA = prompt('Введите переменную "a": ').replace(',','.');
+    var strB = prompt('Введите переменную "b": ').replace(',','.');
+    var strC = prompt('Введите переменную "c": ').replace(',','.');
+
+    var a = parseFloat(strA);
+    var b = parseFloat(strB);
+    var c = parseFloat(strC);
+
+    if (a !=strA || b != strB || c != strC) {
+      alert('Вероятно, вы ввели не числа');
+    } else {
+      var discriminant = calcD(a, b, c);
+      if (discriminant === Infinity || discriminant === -Infinity) {
+        alert('Вероятно, вы ввели слишком большие или малые числа');
+      } else if (discriminant < 0) {
+        alert('Уравнение не имеет вещественных корней');
+      } else {
+        alert('D = ' + discriminant);
+      }  
+    }
+
+  </script>
+</body>
+</html>
